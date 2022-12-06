@@ -1,0 +1,392 @@
+<!-- Deklaration das es sich hier um ein Dokument vom Typ HTML handelt  -->
+<!doctype html>
+
+<!-- Definition der menschlichen Sprache, in diesem Fall ist Deutsch -->
+<html lang="de">
+
+<!-- ------------------------------------------------------ Beginn des Head-Teils ------------------------------------------------------ -->
+<!-- 3.3 Head-Teil -->
+<head>
+    <!-- Zeichenkodierung  -->
+    <meta charset="utf-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>CO²-Footprint</title>
+
+    <!-- aktueller CSS CDN-Link von Bootstrap https://getbootstrap.com/docs/5.2/getting-started/introduction/#cdn-links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- aktueller CDN-Link von Bootstrap zu den Icons der Sidebar https://icons.getbootstrap.com/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    
+  
+    <!-- Tabellenanteil -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.1/dist/bootstrap-table.min.css">   
+</head>
+<!-- ------------------------------------------------------ Ende des Head-Teils ------------------------------------------------------ -->
+
+<!-- ------------------------------------------------------ Beginn des Body-Teils ------------------------------------------------------ -->
+<!-- 3.4 Body -->
+<body>
+
+<!-- ------------------------------------------------------ Anfang des gesamtent Header-Bereich ------------------------------------------------------ -->
+<!-- 3.4.1 Header-Teil -->
+<header>
+  
+  
+  <div class="page-header"><!--  Anafang Seitentitel mit Logo -->
+    
+    <div class="row flex-nowrap"><!-- Beginn der Dreiteilung, siehe dazu Abbildung 4, flex sagt aus das die Spalte, anpassungsfähig ist während nowrap verhindert einen Zeilenumbruch-->
+  
+      <div class="col-2 bg-secondary text-center"><!-- Anfang Zeile Links mit der Begrenzung auf 2 Einheiten (col-2) -->
+  
+          <img src="co4.svg" class="img-fluid"><!-- Logo, img-fluid lässt das Bild in seiner Größe sich verändern -->
+  
+      </div><!-- Ende Zeile Links-->
+  
+      
+    <div class="col-8 bg-secondary text-center pt-4 text-white"><!-- Anfang Zeile Mitte mit der Begrenzung auf 8 Einheiten (col-8), wird fortlaufen gezählt, ihhnerhalb der Spalte hat die gesamte Zeile die Länge von 10 Einheiten. -->
+  
+          <h3>Willkommen bei CO²-Footprint</h3><!-- Titel innerhalb der des Browserfensters -->
+        
+    </div><!-- Ende Zeile Mitte-->
+      
+      
+      <div class="col-2 bg-secondary"><!-- Anfang Zeile Rechts -->
+            <!-- enthält keinen Inhalt und dient als räumliches Formatierungselement -->
+      </div><!-- Ende Zeile Rechts -->
+    
+    </div><!-- Ende der Dreiteilung -->
+  
+  </div> <!--  Ende Seitentitel mit Logo -->
+  
+
+  <nav class="navbar navbar-expand-lg bg-dark"> <!-- Beginn der Navigationsbar, navbar-expand-lg bedeutet wenn das div-Element > oder = 992px (von rechts nach links) ist soll die navbar ausgedehnt angezeigt wird, siehe dazu Abbildung 4 -->
+
+        <div class="container-fluid bg-secondary"><!-- Beginn des div-Elements der Navigationsbar, erstreckt sich über die gesamte Seite -->
+          <a href="#" class="navbar-brand text-white">CO²-Footprint</a><!-- Navigationsbar-"Logo/Bezeichner/Titel" als Link-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigationBar"> <!-- Beginn und Funktionsbeschreibung des NavbarButton mit Verweis über ID (bs ist ein Verweis auf Bootstrap)-->
+            <span class="bi bi-toggle-off text-white"></span> <!-- erst sichtbar wenn div-Element < 992px (von rechts nach links) -->
+          </button> <!-- Ende NavbarButton -->
+
+        </div> <!-- Ende des div-Elements, das für navbar-expand-lg gilt, sprich wenn dieses div-Element kleiner 992px wird, erscheint der Button -->
+
+        <div class="collapse navbar-collapse bg-secondary" id="navigationBar"> <!-- Beginn des div-Elements der die Inhalte der Sidebar entält-->
+          <ul class="navbar-nav me-auto mb-1 mb-lg-0"> <!-- Beginn ungeordnete Liste der Elemente der Navigationsbar -->
+            <!-- Beginn Listen-Elemente -->
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#" id="sBswitch">SwitchSidbar</a> <!-- Wichtig ist die ID zu berücksichtigen, für das Skript im Folgenden -->
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Navigation1</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Navigation2</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Navigation3</a>
+            </li>
+
+            <!-- Ende Listen-Elemente -->
+            </ul><!-- Beginn ungeordnete Liste der Elemente -->
+          </div><!-- Ende des div-Elements der die Inhalte der Sidebar entält-->
+
+      </nav> <!-- Ende der Navigationsbar -->
+
+</header>
+<!-- ------------------------------------------------------ Ende des gesamtent Header-Bereich ------------------------------------------------------ -->
+<!-- ------------------------------------------------------ Begin des gesamtent Main-Bereichs ------------------------------------------------------ -->
+<!-- 3.4.2 Main-Teil -->
+<main>
+    <div class="row flex-nowrap"> <!-- Diese div-Element deklariert den gesamten Main Bereich als eine Spalte, er endet mit dem Ende des Main-Bereichs-->
+        <div class="col-2 bg-secondary" > <!-- Anfang Zeile Links, siehe dazu Abbildung 4 -->
+             
+<!-- 3.4.5 Sidebar-Links -->
+            <div id="liSbar" class="collapse show"> <!-- hier wird das div-Elemnt der linken Sidebar angezeigt, mittels collapse show -->
+            <div class="bg-dark" id="liSBar"> <!-- Sidebar Links Start, auf der Webseite an der schwarzen Farbe erkennbar -->
+                
+                <div class="d-flex flex-column align-sm-start px-3 pt-2 text-white min-vh-100"><!-- d-flex ist eine quasi Trennung zwischen Inhalt und Kontainer, das div-Element nimmt den gesamten Bereich an der zur Verfügung steht, der Inhalt aber nur den Bereich der ihm zugewiesen wurde-->
+                  
+                  <!-- Sidebar Elemente, Icons, Texfarbe, Position-->
+                    <a href="#" class="nav-link px-0">
+                      <i class="fs-4 bi-layout-sidebar-inset text-white"></i> <span class="fs-5 d-none d-sm-inline text-white">Sidebar</span>
+                    </a>
+                    
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-sm-start">
+                      <li class="nav-item">
+                        <a href="#" class="nav-link px-0">
+                          <i class="fs-4 bi-1-square text-white"></i> <span class="ms-1 d-none d-sm-inline text-white">Link 1</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link px-0">
+                          <i class="fs-4 bi-2-square text-white"></i> <span class="ms-1 d-none d-sm-inline text-white">Link 2</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link px-0">
+                          <i class="fs-4 bi-3-square text-white"></i> <span class="ms-1 d-none d-sm-inline text-white">Link 3</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link px-0">
+                          <i class="fs-4 bi-4-square text-white"></i> <span class="ms-1 d-none d-sm-inline text-white">Link 4</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link px-0">
+                          <i class="fs-4 bi-5-square text-white"></i> <span class="ms-1 d-none d-sm-inline text-white">Link 5</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link px-0">
+                          <i class="fs-4 bi-6-square text-white"></i> <span class="ms-1 d-none d-sm-inline text-white">Link 6</span>
+                        </a>
+                      </li>
+                    </ul>
+
+                </div>
+              </div> <!-- Sidebar Links Ende-->
+            </div>
+
+        </div> <!-- Ende Zeile Links-->
+        <div class="col-8"> <!-- Anfang Zeile Mitte-->
+
+             
+<!-- 3.4.3 Tabelle -->       
+            <div class="container-fluid p-5 my-4 "><!-- Beginn div-Element für Tabelle, dieser Kontainer ersterckt sich über die gesamten 8 Einheiten des darüberliegenden -->
+  
+              <h2>CO²-Emmision</h2> <!-- Titel der Tabelle -->
+              <p>aufgestellt nach Länder und Unternemen </p>
+             
+             <!-- data-search ermöglich das sucht in der Tabelle, data-pagination stellt die Möglichkeit mehr Datensätz pro Seite anzuzeigen, über data-show-columns können einzelene Spalten der Tabelle ausgeblendet werden  -->
+                <table data-toggle="table" data-search="true" data-pagination="true" data-show-columns="true">
+                  <thead class="bg-secondary"> <!-- der Tabellenkopf beinhaltet die Spaltennamen -->
+                      <tr>
+                        <th data-sortable="true">ID</th> <!-- mittels data-sortable können die Spalten aufsteigend bzw. absteigend sortiert werden -->
+                        <th data-sortable="true">Land</th>
+                        <th data-sortable="true">Unternehmen</th>
+                        <th data-sortable="true">CO²-Emmision in kg</th>
+          
+                      </tr>
+                    </thead>
+                    <tbody class="bg-secondary"> <!-- der Tabellenbody beinhaltet die Werte -->
+                      <tr>
+                        <td>1</td>
+                        <td>USA</td>
+                        <td>General Motors</td>
+                        <td>8090</td>
+          
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>USA</td>
+                        <td>Alphabet</td>
+                        <td>35843</td>
+          
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Deutschland</td>
+                        <td>BMW</td>
+                        <td>369752</td>
+          
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Deutschland</td>
+                        <td>Mercedes Benz</td>
+                        <td>145478</td>
+          
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Deutschland</td>
+                        <td>Siemens AG</td>
+                        <td>3697952</td>
+          
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>Deutschland</td>
+                        <td>Bayer AG</td>
+                        <td>1454378</td>
+          
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>Japan</td>
+                        <td>Hitachi</td>
+                        <td>89734</td>
+          
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>Japan</td>
+                        <td>Toyota Motor</td>
+                        <td>897374</td>
+          
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>Japan</td>
+                        <td>Honda Motor</td>
+                        <td>897334</td>
+          
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td>Japan</td>
+                        <td>Nissan</td>
+                        <td>89734</td>
+          
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td>Japan</td>
+                        <td>Fujitsu</td>
+                        <td>89734</td>
+          
+                      </tr>
+          
+                      <tr>
+                        <td>12</td>
+                        <td>USA</td>
+                        <td>Ford Motor</td>
+                        <td>800</td>
+          
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>USA</td>
+                        <td>Boeing</td>
+                        <td>3584</td>
+          
+                      </tr>
+          
+          
+          
+          
+                    </tbody><!-- Ende der Tabellenbody-->
+              </table><!-- Ende der Tabelle-->
+              </div> <!-- Ende div-Element für Tabelle, "dieser Kontainer ersterckt sich über die gesamten 8 Einheiten des darüberliegenden" -->
+                           
+  
+  
+            
+          
+
+
+          
+
+        </div><!-- Ende Zeile Mitte-->
+       
+        <div class="col-2 bg-secondary"> <!-- Anfang Zeile Rechts, siehe dazu Abbildung 4-->
+
+<!-- 3.4.6. Sidebar-Rechts -->
+          <div id="reSbar" class="collapse"> <!-- die Sidebar auf der rechten Seite ist mittels collapse zusammengeklappt, das ist die Ausgangsposition -->
+            <div class="bg-dark" id="reSBar"> <!-- Sidebar Rechts Start-->
+                
+              <div class="d-flex flex-column align-items-sm-end px-3 pt-2 text-white min-vh-100">
+                  
+                <!-- Sidebar Elemente, Icons, Texfarbe, Position aber im Vergleich zur linken sit die Anordung umgekehrt und align ist auf end, was hier das Ende der Seite, von rechts nach links bedeutet -->
+                    <a href="#" class="nav-link px-0">
+                      <span class="fs-5 d-none d-sm-inline text-white">Sidebar</span> <i class="fs-4 bi bi-layout-sidebar-inset-reverse text-white"></i> 
+                    </a>
+                    
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-sm-start">
+                      <li class="nav-item">
+                        <a href="#" class="nav-link px-0">
+                           <span class="ms-1 d-none d-sm-inline text-white">Link 1</span> <i class="fs-4 bi-1-square text-white"></i> <!-- span- und i-Tags sind hier verdereht im Vergleich zu der linken Sidebar -->
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link px-0">
+                          <span class="ms-1 d-none d-sm-inline text-white">Link 2</span> <i class="fs-4 bi-2-square text-white"></i> 
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link px-0">
+                          <span class="ms-1 d-none d-sm-inline text-white">Link 3</span> <i class="fs-4 bi-3-square text-white"></i> 
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link px-0">
+                          <span class="ms-1 d-none d-sm-inline text-white">Link 4</span> <i class="fs-4 bi-4-square text-white"></i> 
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link px-0">
+                          <span class="ms-1 d-none d-sm-inline text-white">Link 5</span> <i class="fs-4 bi-5-square text-white"></i> 
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link px-0">
+                          <span class="ms-1 d-none d-sm-inline text-white">Link 5</span> <i class="fs-4 bi-6-square text-white"></i> 
+                        </a>
+                      </li>
+                    </ul>
+                    <hr>
+                </div>
+              </div>
+
+            </div>
+        </div> <!-- Ende Zeile Rechts-->
+        
+      </div> <!-- Dieses div-Element deklariert das Ende des gesamten Main Bereich das zuvor als eine Spalte deklariert wurde -->
+
+</main>
+<!-- ------------------------------------------------------ Ende des gesamtent Main-Bereichs ------------------------------------------------------ -->
+
+<!-- 3.4.7 Footer -->
+<!-- ------------------------------------------------------ Beginn des Footer-Bereichs ------------------------------------------------------ -->
+<footer>
+    <div class="contianer-fluid bg-dark"> <!-- ein durchgehender Bereich in dem der Footer gepackt ist, siehe Abbildung 4 -->
+        
+          <footer class="py-0 my-0"> <!-- Footer als ungeordnete Liste -->
+            <ul class="nav justify-content-center pb-0 mb-0">
+              <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-white">rechtliche Hinweise</a>
+              </li>
+    
+            </ul>
+    
+          </footer>
+        
+      </div>
+</footer>
+<!-- ------------------------------------------------------ Ende des Footer-Bereichs ------------------------------------------------------ -->
+
+<!-- ------------------------------------------------------ Start Script Teil ------------------------------------------------------ -->
+<!-- CDN Tabellenanteil Quelle: https://bootstrap-table.com/docs/getting-started/introduction/ -->
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-table@1.21.1/dist/bootstrap-table.min.js"></script>
+
+<!-- 3.4.8 JavaScript -->
+<!--Start Funktion Sidebar ausblenden-->
+<!-- Die Funktion aus dem jQuery Framework für JavaScript, besagt das bei einem Klick auf das Element mit der ID "sBswitch" eine Funktion ausgelöst werden soll. 
+  Im Funktionsrumpf werden die beiden Elemente mit den ID's "reSbar" und "liSbar", mittels der Option "toggle", in Bezug auf "collapse" umgeschaltet -->
+<script>
+  $("#sBswitch").click(function () { 
+    $("#reSbar").collapse('toggle');
+    $("#liSbar").collapse('toggle');
+  });
+</script>
+<!--Ende Funktion Sidebar ausblenden-->
+
+<!-- ------------------------------------------------------ Ende Script Teil ------------------------------------------------------ -->
+
+
+
+<!-- ------------------------------------------------------ geprüft ------------------------------------------------------ -->
+</body>
+
+</html>
